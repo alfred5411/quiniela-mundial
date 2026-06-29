@@ -24,7 +24,7 @@ st.markdown("""
 }
 </style>
 
-<h1 class="responsive-title">🏆 Pronósticos Mundial CAN-USA-MEX</h1>
+<h2 class="responsive-title">🏆 Pronósticos Mundial CAN-USA-MEX</h2>
 """, unsafe_allow_html=True)
 
 # MENÚ LATERAL
@@ -278,7 +278,7 @@ if modo == "Clasificación":
     }
     </style>
 
-    <h3 class="responsive-title">🏆 Clasificación General</h1>
+    <h3 class="responsive-title">🏆 Clasificación General</h3>
     """, unsafe_allow_html=True)
 
     ranking = []
