@@ -484,96 +484,96 @@
       "61",
       "I",
       "Noruega",
-      "",
-      "",
+      "1",
+      "4",
       "Francia"
     ],
     [
       "62",
       "I",
       "Senegal",
-      "",
-      "",
+      "5",
+      "0",
       "Irak"
     ],
     [
       "63",
       "H",
       "Cabo Verde",
-      "",
-      "",
+      "0",
+      "0",
       "Arabia Saudí"
     ],
     [
       "64",
       "H",
       "Uruguay",
-      "",
-      "",
+      "0",
+      "1",
       "España"
     ],
     [
       "65",
       "G",
       "Egipto",
-      "",
-      "",
+      "1",
+      "1",
       "Irán"
     ],
     [
       "66",
       "G",
       "Nueva Zelanda",
-      "",
-      "",
+      "1",
+      "5",
       "Bélgica"
     ],
     [
       "67",
       "L",
       "Panamá",
-      "",
-      "",
+      "0",
+      "2",
       "Inglaterra"
     ],
     [
       "68",
       "L",
       "Croacia",
-      "",
-      "",
+      "2",
+      "1",
       "Ghana"
     ],
     [
       "69",
       "K",
       "Colombia",
-      "",
-      "",
+      "0",
+      "0",
       "Portugal"
     ],
     [
       "70",
       "K",
       "RD Congo",
-      "",
-      "",
+      "3",
+      "1",
       "Uzbekistán"
     ],
     [
       "71",
       "J",
       "Argelia",
-      "",
-      "",
+      "3",
+      "3",
       "Austria"
     ],
     [
       "72",
       "J",
       "Jordania",
-      "",
-      "",
+      "1",
+      "3",
       "Argentina"
     ]
   ],
@@ -609,39 +609,39 @@
       "Suecia"
     ],
     "G": [
-      "",
-      "",
+      "Bélgica",
+      "Egipto",
       ""
     ],
     "H": [
-      "",
-      "",
+      "España",
+      "Cabo Verde",
       ""
     ],
     "I": [
-      "",
-      "",
-      ""
+      "Francia",
+      "Noruega",
+      "Senegal"
     ],
     "J": [
       "Argentina",
-      "",
-      ""
+      "Austria",
+      "Argelia"
     ],
     "K": [
-      "",
-      "",
-      ""
+      "Colombia",
+      "Portugal",
+      "RD Congo"
     ],
     "L": [
-      "",
-      "",
-      ""
+      "Inglaterra",
+      "Croacia",
+      "Ghana"
     ]
   },
   "fase_final": {
     "Octavos": [
-      "",
+      "Canadá",
       "",
       "",
       "",
