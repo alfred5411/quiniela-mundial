@@ -95,19 +95,19 @@ def calcular_puntos_participante_json(participante, reales):
     fase_real = reales["fase_final"]
 
     for equipo in fase_p.get("octavos", []):
-        if equipo in fase_real.get("octavos", []):
+        if equipo in fase_real.get("Octavos", []):
             pts_8vos += 9
 
     for equipo in fase_p.get("cuartos", []):
-        if equipo in fase_real.get("cuartos", []):
+        if equipo in fase_real.get("Cuartos", []):
             pts_4tos += 13
 
     for equipo in fase_p.get("semifinales", []):
-        if equipo in fase_real.get("semifinales", []):
+        if equipo in fase_real.get("Semifinales", []):
             pts_sf += 16
 
     for equipo in fase_p.get("finalistas", []):
-        if equipo in fase_real.get("finalistas", []):
+        if equipo in fase_real.get("Finalistas", []):
             pts_f += 17
 
     # =========================
