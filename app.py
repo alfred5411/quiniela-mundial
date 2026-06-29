@@ -28,6 +28,15 @@ st.markdown("""
 <h3 class="responsive-title">Mundial CAN-USA-MEX</h3>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<hr style="
+    margin: 15px 0;
+    border: none;
+    height: 2px;
+    background-color: #4CAF50;
+">
+""", unsafe_allow_html=True)
+
 # MENÚ LATERAL
 st.sidebar.title("🏆 Quiniela Mundial")
 
