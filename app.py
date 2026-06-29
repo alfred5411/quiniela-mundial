@@ -473,7 +473,19 @@ if modo == "Clasificación":
 # BLOQUE RESULTADOS
 elif modo == "Resultados":
 
-    st.header("📋 Resultados oficiales")
+    # st.header("📋 Resultados oficiales")
+
+    st.markdown("""
+    <style>
+    .responsive-title {
+        font-size: clamp(1.5rem, 5vw, 2.8rem);
+        text-align: left;
+        font-weight: 700;
+    }
+    </style>
+
+    <h3 class="responsive-title">📋 Resultados oficiales</h3>
+    """, unsafe_allow_html=True)
 
     seccion = st.selectbox(
         "Mostrar",
