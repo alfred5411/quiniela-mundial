@@ -19,7 +19,7 @@ st.markdown("""
 <style>
 .responsive-title {
     font-size: clamp(1.5rem, 5vw, 2.8rem);
-    text-align: center;
+    text-align: left;
     font-weight: 700;
 }
 </style>
@@ -278,7 +278,7 @@ if modo == "Clasificación":
     }
     </style>
 
-    <h1 class="responsive-title">🏆 Clasificación General</h1>
+    <h3 class="responsive-title">🏆 Clasificación General</h1>
     """, unsafe_allow_html=True)
 
     ranking = []
