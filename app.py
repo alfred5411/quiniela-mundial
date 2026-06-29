@@ -10,7 +10,7 @@ ADMIN_PASSWORD = "GreyArya2026"
 
 st.set_page_config(
     page_title="Quiniela Mundial",
-    layout="wide"
+    layout="centered"
 )
 
 st.title("🏆 Pronósticos Mundial CAN-USA-MEX")
