@@ -267,7 +267,19 @@ jugadores_campo = sorted(jugadores_campo)
 # BLOQUE CLASIFICACIÓN
 if modo == "Clasificación":
 
-    st.title("🏆 Clasificación General")
+    #st.title("🏆 Clasificación General")
+
+    st.markdown("""
+    <style>
+    .responsive-title {
+        font-size: clamp(1.5rem, 5vw, 2.8rem);
+        text-align: left;
+        font-weight: 700;
+    }
+    </style>
+
+    <h1 class="responsive-title">🏆 Clasificación General</h1>
+    """, unsafe_allow_html=True)
 
     ranking = []
 
