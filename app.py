@@ -13,7 +13,19 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🏆 Pronósticos Mundial CAN-USA-MEX")
+# st.title("🏆 Pronósticos Mundial CAN-USA-MEX")
+
+st.markdown("""
+<style>
+.responsive-title {
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
+    text-align: center;
+    font-weight: 700;
+}
+</style>
+
+<h1 class="responsive-title">🏆 Pronósticos Mundial CAN-USA-MEX</h1>
+""", unsafe_allow_html=True)
 
 # MENÚ LATERAL
 st.sidebar.title("🏆 Quiniela Mundial")
