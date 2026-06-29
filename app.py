@@ -24,7 +24,8 @@ st.markdown("""
 }
 </style>
 
-<h2 class="responsive-title">🏆 Pronósticos Mundial CAN-USA-MEX</h2>
+<h2 class="responsive-title">🏆 Pronósticos</h2>
+<h3 class="responsive-title">Mundial CAN-USA-MEX</h3>
 """, unsafe_allow_html=True)
 
 # MENÚ LATERAL
