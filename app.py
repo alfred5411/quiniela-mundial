@@ -95,11 +95,18 @@ def guardar_historico_clasificacion(participantes, reales):
             fila["Participante"]
         ] = i
 
-    subir_json(
-    "dataweb/clasificacion_anterior.json",
-    posiciones_actuales,
-    "Actualizar clasificación"
-    )
+    with open(
+        "dataweb/clasificacion_anterior.json",
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            posiciones,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
 
 # Guardar columna CAMBIOS
 def guardar_cambios(
@@ -175,11 +182,18 @@ def guardar_cambios(
         else:
             cambios[nombre] = "•"
 
-    subir_json(
-    "dataweb/cambios.json",
-    cambios,
-    "Actualizar cambios"
-    )        
+    with open(
+        "dataweb/cambios.json",
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            cambios,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )        
 
 # Eliminar duplicados en Fase Final
 def opciones_disponibles(lista_base, seleccionados):
@@ -315,11 +329,13 @@ if modo == "Clasificación":
         posiciones_anteriores = {}
 
     # Leer CAMBIOS
-    subir_json(
-    "dataweb/cambios.json",
-    cambios,
-    "Actualizar cambios"
-    )    
+    with open(
+        "dataweb/cambios.json",
+        "r",
+        encoding="utf-8"
+    ) as f:
+
+        cambios = json.load(f)    
 
     # Columna Posición
     for i, fila in enumerate(ranking, start=1):
@@ -793,15 +809,20 @@ elif modo == "Administración":
                 reales
             )
 
-            subir_json(
+            with open(
                 "dataweb/resultados_reales.json",
-                reales,
-                "Actualizar resultados"
-            )
+                "w",
+                encoding="utf-8"
+            ) as f:
 
-            st.success("Resultados guardados correctamente.")
+                json.dump(
+                    reales,
+                    f,
+                    ensure_ascii=False,
+                    indent=2
+                )
 
-            st.rerun()
+            st.success("Clasificados guardados correctamente")
 
     # FASE FINAL
     elif seccion_admin == "Fase Final":
