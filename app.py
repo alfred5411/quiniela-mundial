@@ -5,6 +5,7 @@ import os
 
 from logica import calcular_puntos_participante_json
 from collections import defaultdict
+from github_utils import subir_json
 
 ADMIN_PASSWORD = "GreyArya2026"
 
@@ -53,8 +54,15 @@ modo = st.sidebar.radio(
 with open("dataweb/participantes.json", encoding="utf-8") as f:
     participantes = json.load(f)
 
-with open("dataweb/resultados_reales.json", encoding="utf-8") as f:
-    reales = json.load(f)
+subir_json(
+    "dataweb/resultados_reales.json",
+    reales,
+    "Actualizar resultados"
+)
+
+st.success("Resultados guardados correctamente.")
+
+st.rerun()
 
 with open("dataweb/jugadores55-26.json", encoding="utf-8") as f:
     jugadores = json.load(f)
@@ -94,18 +102,11 @@ def guardar_historico_clasificacion(participantes, reales):
             fila["Participante"]
         ] = i
 
-    with open(
-        "dataweb/clasificacion_anterior.json",
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            posiciones,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
+    subir_json(
+    "dataweb/clasificacion_anterior.json",
+    posiciones_actuales,
+    "Actualizar clasificación"
+    )
 
 # Guardar columna CAMBIOS
 def guardar_cambios(
@@ -181,18 +182,11 @@ def guardar_cambios(
         else:
             cambios[nombre] = "•"
 
-    with open(
-        "dataweb/cambios.json",
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            cambios,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )        
+    subir_json(
+    "dataweb/cambios.json",
+    cambios,
+    "Actualizar cambios"
+    )        
 
 # Eliminar duplicados en Fase Final
 def opciones_disponibles(lista_base, seleccionados):
@@ -328,13 +322,11 @@ if modo == "Clasificación":
         posiciones_anteriores = {}
 
     # Leer CAMBIOS
-    with open(
-        "dataweb/cambios.json",
-        "r",
-        encoding="utf-8"
-    ) as f:
-
-        cambios = json.load(f)    
+    subir_json(
+    "dataweb/cambios.json",
+    cambios,
+    "Actualizar cambios"
+    )    
 
     # Columna Posición
     for i, fila in enumerate(ranking, start=1):
@@ -808,20 +800,15 @@ elif modo == "Administración":
                 reales
             )
 
-            with open(
+            subir_json(
                 "dataweb/resultados_reales.json",
-                "w",
-                encoding="utf-8"
-            ) as f:
+                reales,
+                "Actualizar resultados"
+            )
 
-                json.dump(
-                    reales,
-                    f,
-                    ensure_ascii=False,
-                    indent=2
-                )
+            st.success("Resultados guardados correctamente.")
 
-            st.success("Clasificados guardados correctamente")
+            st.rerun()
 
     # FASE FINAL
     elif seccion_admin == "Fase Final":
