@@ -54,15 +54,8 @@ modo = st.sidebar.radio(
 with open("dataweb/participantes.json", encoding="utf-8") as f:
     participantes = json.load(f)
 
-subir_json(
-    "dataweb/resultados_reales.json",
-    reales,
-    "Actualizar resultados"
-)
-
-st.success("Resultados guardados correctamente.")
-
-st.rerun()
+with open("dataweb/resultados_reales.json", encoding="utf-8") as f:
+    reales = json.load(f)
 
 with open("dataweb/jugadores55-26.json", encoding="utf-8") as f:
     jugadores = json.load(f)
